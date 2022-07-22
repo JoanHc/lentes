@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link de hoja de estilos y de estilos de letra-->
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="CSS/styleproducto.css">
+    <script src="https://kit.fontawesome.com/8864a003ed.js" crossorigin="anonymous"></script>
+    <title>Producto</title>
+
+</head>
+<body>
+         <!--Encabezado y Barra de Navegación-->
+    <header class="main-header">
+        <div class="container container--flex">
+            <div class="main-header__container">
+                <h1 class="main-header__title">GOGGLES</h1>
+                <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
+                <nav class="main-nav" id="main-nav">
+                    <ul class="menu">
+                        <li class="menu__item"><a href="index.html" class="menu__link">Inicio</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Acerca de</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Características</a></li>
+                        <li class="menu__item"><a href="tienda.html" class="menu__link">Tienda</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main-header__container">
+                <span class="main-header__txt">Necesitas ayuda</span>
+                <p class="main-header__txt"><i class="fas fa-phone"></i> Teléfono 123-4567-809</p>
+            </div>
+            <div class="main-header__container">
+                <a href="" class="main-header__link"><i class="fas fa-user"></i></a>
+                <a href="" class="main-header__btn">Mi carrito<i class="fas fa-shopping-cart"></i></a>
+
+                <input type="search" class="main-header__input" placeholder="Buscar productos"><i
+                    class="fas fa-search"></i>
+
+            </div>
+
+        </div>
+
+
+        <!--Menú Carrito-->
+
+        <div class="container" id="container-carrito">
+            <div class="row">
+
+                <div class="two columns u-pull-right">
+
+                    <ul>
+
+                        <li class="submenu" id="submenu">
+                            <img src="/img/cart.png" alt="">
+                            <div id="carrito">
+                                <p class="vacio">Carrito Vacio</p>
+                                <table id="lista-carrito" class="u-ful-width">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Lentes</th>
+                                            <th>Precio</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                                <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar carrito</a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- Contenido principal -->
+    <div>
+        <div class="articulo">
+          <section class="Img-prod">
+           <img src="Img/lentes_2.jpg">
+          </section>
+  
+          <section class="Info-prod">
+            <div>
+              <h3>Lentes Gucci</h3>
+              <p>Modelo: DH2920-152</p>
+            </div>
+  
+            <div>
+              <p>$575.00 MXN</p>
+
+              <p>Cantidad</p>
+              <form  class="cantidad">
+                <label class="btn_cantidad" onclick="decrementar()"><i class="fa-solid fa-minus"></i></label>
+                <input class="inpt_cant" type="text" value="1" id="item" name="item" disabled>
+                <label class="btn_cantidad" onclick="incrementar()"><i class="fa-solid fa-plus"></i></label>
+              </form>
+                 
+                <script>
+                function incrementar() {
+                valor = document.getElementById("item");
+                if (valor.value < 10)valor.value ++;
+                }
+                 
+                function decrementar() {
+                valor = document.getElementById("item");
+                if (valor.value > 01)valor.value --;
+                }
+                </script>
+            </div>
+  
+            <br>
+            <div class="Botones">
+              <label class="Boton_comprar">
+                  <a href="#">Comprar</a>
+              </label>
+  
+              <label class="Boton_añadir">
+                <a href="#"  data-id="1">Añadir a carrito</a>
+              </label>
+  
+            </div>
+          </section>
+        </div>
+    </div>
+      <main class="main" id="main">
+        <div class="container" id="container">
+            <h2 class="main-title">Novedades para ti</h2>
+            <section class="container-products" id="container-products">
+                <div class="product" id="product">
+                    <img src="Img/lentes_1.jpg" alt="lentes_1" class="product__img">
+                    <div class="product__description">
+                        <h3 class="product__title">Farenheit (Grey)</h3>
+                        <span class="product__price">$475.00</span>
+                        <a class="product__icon fas fa-cart-plus" data-id="1"></a>
+                    </div>
+
+                </div>
+
+                <div class="product" id="product">
+                    <img src="Img/lentes_2.jpg" alt="lentes_2" class="product__img">
+                    <div class="product__description">
+                        <h3 class="product__title">Opium (Grey)</h3>
+                        <span class="product__price">$575.00</span>
+                        <a class="product__icon fas fa-cart-plus" data-id="2"></a>
+                    </div>
+
+                </div>
+
+                <div class="product" id="product">
+                    <img src="Img/lentes_3.jpg" alt="lentes_3" class="product__img">
+                    <div class="product__description">
+                        <h3 class="product__title">Kenneth Cole</h3>
+                        <span class="product__price">$585.00</span>
+                        <a class="product__icon fas fa-cart-plus" data-id="3"></a>
+                    </div>
+
+                </div>
+
+                <div class="product" id="product">
+                    <img src="Img/lentes_5.jpg" alt="lentes_4" class="product__img">
+                    <div class="product__description">
+                        <h3 class="product__title">Farenheit Oval</h3>
+                        <span class="product__price">$325.00</span>
+                        <a class="product__icon fas fa-cart-plus" data-id="4"></a>
+                    </div>
+
+                </div>
+
+                <div class="product" id="product">
+                    <img src="Img/imagen_5.jpg" alt="lentes_5" class="product__img">
+                    <div class="product__description">
+                        <h3 class="product__title">Farenheit Oval</h3>
+                        <span class="product__price">$600.00</span>
+                        <a class="product__icon fas fa-cart-plus" data-id="5"></a>
+                    </div>
+
+                </div>
+
+                <div class="product" id="product">
+                    <img src="Img/lentes_6.jpg" alt="lentes_6" class="product__img">
+                    <div class="product__description">
+                        <h3 class="product__title">Sunglasses</h3>
+                        <span class="product__price">$550.00</span>
+                        <a class="product__icon fas fa-cart-plus" data-id="6"></a>
+                    </div>
+
+                </div>
+
+                <div class="product" id="product">
+                    <img src="Img/lentes_4.jpg" alt="lentes_7" class="product__img">
+                    <div class="product__description">
+                        <h3 class="product__title">Kenneth Cole</h3>
+                        <span class="product__price">$530.00</span>
+                        <a class="product__icon fas fa-cart-plus" data-id="7"></a>
+                    </div>
+
+                </div>
+
+                <div class="product" id="product">
+                    <img src="Img/lentes_8.jpg" alt="lentes_8" class="product__img">
+                    <div class="product__description">
+                        <h3 class="product__title">Sunglasses</h3>
+                        <span class="product__price">$630.00</span>
+                        <a class="product__icon fas fa-cart-plus" data-id="8"></a>
+                    </div>
+
+                </div>
+
+                <div class="product" id="product">
+                    <img src="Img/lentes_9.jpg" alt="lentes_9" class="product__img">
+                    <div class="product__description">
+                        <h3 class="product__title">Sunglasses</h3>
+                        <span class="product__price">$700.00</span>
+                        <a class="product__icon fas fa-cart-plus" data-id="9"></a>
+                    </div>
+
+                </div>
+
+                <div class="product" id="product">
+                    <img src="Img/lentes_10.jpg" alt="lentes_10" class="product__img">
+                    <div class="product__description">
+                        <h3 class="product__title">Sunglasses</h3>
+                        <span class="product__price">$500.00</span>
+                        <a class="product__icon fas fa-cart-plus" data-id="10"></a>
+                    </div>
+
+                </div>
+
+                <div class="product" id="product">
+                    <img src="Img/lentes_11.jpg" alt="lentes_11" class="product__img">
+                    <div class="product__description">
+                        <h3 class="product__title">Sunglasses</h3>
+                        <span class="product__price">$300.00</span>
+                        <a class="product__icon fas fa-cart-plus" data-id="11"></a>
+                    </div>
+
+                </div>
+
+                <div class="product" id="product">
+                    <img src="Img/lentes_12.jpg" alt="lentes_12" class="product__img">
+                    <div class="product__description">
+                        <h3 class="product__title">Sunglasses</h3>
+                        <span class="product__price">$320.00</span>
+                        <a class="product__icon fas fa-cart-plus" data-id="12"></a>
+                    </div>
+
+                </div>
+            </section>
+        </main>   <br>
+
+    <!--Pie de pagina, sobre información-->
+
+    <footer class="main-footer">
+        <div class="footer__section">
+            <h2 class="footer__title">Sobre nosotros</h2>
+            <p class="footer__txt">Curabitur non nulla sit amet nislinit tempus convallis quis ac lectus. lac inia eget
+                consectetur sed, convallis at tellus. Nulla porttitor accumsana tincidunt.</p>
+        </div>
+        <div class="footer__section">
+            <h2 class="footer__title">Localización :</h2>
+            <p class="footer__txt">0926k 4th block building, king Avenue, New York City</p>
+            <h2 class="footer__title">Contact</h2>
+            <p class="footer__txt">Teléfono : +121 098 8907 9987</p>
+            <p class="footer__txt">Email : info@example.com</p>
+        </div>
+        <div class="footer__section">
+            <h2 class="footer__title">Enlaces rápidos</h2>
+            <a href="" class="footer__link">Inicio</a>
+            <a href="" class="footer__link">Acerca de</a>
+            <a href="" class="footer__link">Características</a>
+            <a href="" class="footer__link">Tienda</a>
+            <a href="" class="footer__link">Contacto</a>
+        </div>
+        <div class="footer__section">
+            <h2 class="footer__title">Suscríbete a tus ofertas</h2>
+            <p class="footer__txt">Al suscribirse a nuestra lista de correo, siempre recibirá las últimas noticias y
+                actualizaciones de
+                us.</p>
+            <input type="email" class="footer__input" placeholder="Enter your email">
+        </div>
+        <p class="copy">© 2021 Tienda Online- Joan</p>
+    </footer>
+
+      <script src="JS/app.js"></script>     
+</body>
+</html>
